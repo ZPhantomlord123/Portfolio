@@ -44,7 +44,7 @@ public class CameraSwitcher : MonoBehaviour
     public void ActivateAboutCamera() => ActivateCamera(CameraType.AboutCamera);
     public void ActivateCreditCamera() => ActivateCamera(CameraType.CreditCamera);
 
-    private void ActivateCamera(CameraType cameraType)
+    public void ActivateCamera(CameraType cameraType)
     {
         SetAllCamerasPriority(0);
 
