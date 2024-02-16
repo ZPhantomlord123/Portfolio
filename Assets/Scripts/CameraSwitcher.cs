@@ -50,11 +50,24 @@ public class CameraSwitcher : MonoBehaviour
 
         switch (cameraType)
         {
-            case CameraType.AwakeCamera: awakeCamera.Priority = 10; break;
-            case CameraType.DefaultCamera: defaultCamera.Priority = 10; break;
-            case CameraType.ProjectCamera: projectCamera.Priority = 10; break;
-            case CameraType.AboutCamera: aboutCamera.Priority = 10; break;
-            case CameraType.CreditCamera: creditCamera.Priority = 10; break;
+            case CameraType.AwakeCamera: 
+                awakeCamera.Priority = 10;
+                break;
+            case CameraType.DefaultCamera: 
+                defaultCamera.Priority = 10;
+                DisableCurrentContents();
+                break;
+            case CameraType.ProjectCamera: 
+                projectCamera.Priority = 10;
+                StartCoroutine(ActivateGameobjectAfterDelay(UIController.Instance.projectScreenContents.gameObject, 1f));
+                break;
+            case CameraType.AboutCamera: 
+                aboutCamera.Priority = 10;
+                break;
+            case CameraType.CreditCamera: 
+                creditCamera.Priority = 10;
+                StartCoroutine(ActivateGameobjectAfterDelay(UIController.Instance.creditsContents.gameObject, 0.5f));
+                break;
         }
 
         // Update active camera type for debugging
@@ -68,5 +81,17 @@ public class CameraSwitcher : MonoBehaviour
         projectCamera.Priority = priority;
         aboutCamera.Priority = priority;
         creditCamera.Priority = priority;
+    }
+
+    private void DisableCurrentContents()
+    {
+        UIController.Instance.projectScreenContents?.gameObject.SetActive(false);
+        UIController.Instance.creditsContents?.gameObject.SetActive(false); 
+    }
+
+    IEnumerator ActivateGameobjectAfterDelay(GameObject content, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        content.SetActive(true);
     }
 }
