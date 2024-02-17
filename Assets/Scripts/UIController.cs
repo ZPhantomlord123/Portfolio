@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour
 
     public ProjectScreenController projectScreenContents;
     public CreditsController creditsContents;
+    public AboutMeController aboutMeContents;
 
     private void Awake()
     {
