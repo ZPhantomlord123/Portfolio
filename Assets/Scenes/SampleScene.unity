@@ -1168,7 +1168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &377122409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,8 +2083,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2200,7 +2200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153ef8bd4bf78434284d7cee4e98929e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickColor: {fileID: 2100000, guid: b51e3f92be15e1249adab4646ae14a47, type: 2}
+  clickColor: {fileID: 0}
   onTextClick:
     m_PersistentCalls:
       m_Calls: []
@@ -3863,8 +3863,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3980,7 +3980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153ef8bd4bf78434284d7cee4e98929e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickColor: {fileID: 2100000, guid: b51e3f92be15e1249adab4646ae14a47, type: 2}
+  clickColor: {fileID: 0}
   onTextClick:
     m_PersistentCalls:
       m_Calls: []
@@ -6150,7 +6150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358299023}
   m_LocalRotation: {x: 0.06162845, y: 0.06162845, z: 0.70441604, w: 0.70441604}
-  m_LocalPosition: {x: 0.00154, y: 0.00032, z: 0.01617}
+  m_LocalPosition: {x: 0.00154, y: 0.00027000363, z: 0.01617}
   m_LocalScale: {x: 0.00049, y: 0.00049, z: 0.00049}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7629,7 +7629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153ef8bd4bf78434284d7cee4e98929e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickColor: {fileID: 2100000, guid: b51e3f92be15e1249adab4646ae14a47, type: 2}
+  clickColor: {fileID: 0}
   onTextClick:
     m_PersistentCalls:
       m_Calls:
@@ -7687,8 +7687,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8480,7 +8480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.002122, y: 0.00029}
+  m_AnchoredPosition: {x: 0.002122, y: 0.00024}
   m_SizeDelta: {x: 11.199879, y: 1.935776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795127185
@@ -14349,7 +14349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2041261596
 Transform:
   m_ObjectHideFlags: 0
@@ -16779,8 +16779,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.039134532, y: 0.0055184234, z: 0.0016}
-  m_Center: {x: -0.020081405, y: 0.0026478297, z: -0.000000014901161}
+  m_Size: {x: 0.04694295, y: 0.009896698, z: 0.0015999994}
+  m_Center: {x: -0.018615715, y: 0.0024994407, z: 0.0000000023316145}
 --- !u!4 &8173559963696255669
 Transform:
   m_ObjectHideFlags: 0
@@ -16871,8 +16871,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.038157668, y: 0.0055098543, z: 0.0016}
-  m_Center: {x: -0.019592972, y: 0.0026520994, z: -0.000000007450581}
+  m_Size: {x: 0.047674496, y: 0.011021119, z: 0.0015999994}
+  m_Center: {x: -0.018484047, y: 0.0023926592, z: -0.0000000030277798}
 --- !u!114 &8538919949626002180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16981,8 +16981,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03177378, y: 0.0055098543, z: 0.0016}
-  m_Center: {x: -0.016401028, y: 0.0026520956, z: -0.000000007450581}
+  m_Size: {x: 0.038048908, y: 0.009598002, z: 0.0015999994}
+  m_Center: {x: -0.01528283, y: 0.0016485213, z: -0.000000004984907}
 --- !u!114 &8728680953684622617
 MonoBehaviour:
   m_ObjectHideFlags: 0
