@@ -63,7 +63,7 @@ public class CameraSwitcher : MonoBehaviour
                 break;
             case CameraType.AboutCamera: 
                 aboutCamera.Priority = 10;
-                StartCoroutine(ActivateGameobjectAfterDelay(UIController.Instance.aboutMeContents.gameObject, 1f));
+                StartCoroutine(ActivateGameobjectAfterDelay(UIController.Instance.aboutMeContents.gameObject, 1.5f));
                 break;
             case CameraType.CreditCamera: 
                 creditCamera.Priority = 10;
