@@ -1084,7 +1084,7 @@ Transform:
   m_Children:
   - {fileID: 1250731409}
   m_Father: {fileID: 1966757988}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &371180149
 MeshCollider:
@@ -1468,7 +1468,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1966757988}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2047,7 +2047,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1306814671}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -5, y: 98, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2203,7 +2203,19 @@ MonoBehaviour:
   clickColor: {fileID: 0}
   onTextClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1306814672}
+        m_TargetAssemblyTypeName: ProjectScreenController, Assembly-CSharp
+        m_MethodName: PreviousScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &642783157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3808,7 +3820,7 @@ GameObject:
   - component: {fileID: 931290565}
   - component: {fileID: 931290564}
   m_Layer: 0
-  m_Name: ButtonLeft (1)
+  m_Name: ButtonRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3827,7 +3839,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1306814671}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 98, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3983,7 +3995,19 @@ MonoBehaviour:
   clickColor: {fileID: 0}
   onTextClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1306814672}
+        m_TargetAssemblyTypeName: ProjectScreenController, Assembly-CSharp
+        m_MethodName: NextScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &931290565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5932,7 +5956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1306814671
 Transform:
   m_ObjectHideFlags: 0
@@ -5945,7 +5969,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1795127184}
   - {fileID: 1358299024}
   - {fileID: 642783153}
   - {fileID: 931290561}
@@ -5965,6 +5988,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5457fdfb5ccd9a47a3232554ea07f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectScreens:
+  - {fileID: 1358299023}
+  buttonCooldownTime: 0.2
 --- !u!1 &1351108885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6156,7 +6182,7 @@ Transform:
   m_Children:
   - {fileID: 1966757988}
   m_Father: {fileID: 1306814671}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 10, z: 90}
 --- !u!64 &1358299025
 MeshCollider:
@@ -7294,7 +7320,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1966757988}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7610,7 +7636,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1306814671}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 98, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8470,17 +8496,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795127183}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0.01903}
-  m_LocalScale: {x: 0.0004, y: 0.0004, z: 0.0004}
+  m_LocalRotation: {x: 0.6427876, y: 0.000000047869143, z: 0.000000049824028, w: 0.7660445}
+  m_LocalPosition: {x: 0, y: 0, z: 6.615892}
+  m_LocalScale: {x: 0.9070295, y: 0.90702933, z: 0.90702933}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1306814671}
+  m_Father: {fileID: 1966757988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.002122, y: 0.00024}
+  m_AnchoredPosition: {x: -0.068030335, y: -0.20685875}
   m_SizeDelta: {x: 11.199879, y: 1.935776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795127185
@@ -9042,7 +9068,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1966757988}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14200,6 +14226,7 @@ Transform:
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 1795127184}
   - {fileID: 2058145411}
   - {fileID: 1581044492}
   - {fileID: 1907579017}
@@ -14422,7 +14449,7 @@ Transform:
   - {fileID: 911773414}
   - {fileID: 1723243354}
   m_Father: {fileID: 1966757988}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &2058145412
 MeshCollider:
