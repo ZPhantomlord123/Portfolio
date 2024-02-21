@@ -10,6 +10,8 @@ public class HyperlinkButton : MonoBehaviour
 
     public void OnMouseEnter()
     {
+        if (hoverText == null)
+            return;
         // Update the TextMeshProUGUI text on hover
         if (hoverText)
         {
@@ -19,6 +21,8 @@ public class HyperlinkButton : MonoBehaviour
 
     public void OnMouseExit()
     {
+        if (hoverText == null)
+            return;
         // Revert the TextMeshProUGUI text when not hovering
         if (hoverText)
         {

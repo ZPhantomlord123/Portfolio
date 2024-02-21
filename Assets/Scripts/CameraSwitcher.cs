@@ -10,7 +10,8 @@ public class CameraSwitcher : MonoBehaviour
         DefaultCamera,
         ProjectCamera,
         AboutCamera,
-        CreditCamera
+        CreditCamera,
+        WorkCamera,
     }
 
     [SerializeField] private CameraType activeCameraType; // For debugging
@@ -20,6 +21,7 @@ public class CameraSwitcher : MonoBehaviour
     public CinemachineVirtualCamera projectCamera;
     public CinemachineVirtualCamera aboutCamera;
     public CinemachineVirtualCamera creditCamera;
+    public CinemachineVirtualCamera workCamera;
 
     private void OnValidate()
     {
@@ -43,6 +45,7 @@ public class CameraSwitcher : MonoBehaviour
     public void ActivateProjectCamera() => ActivateCamera(CameraType.ProjectCamera);
     public void ActivateAboutCamera() => ActivateCamera(CameraType.AboutCamera);
     public void ActivateCreditCamera() => ActivateCamera(CameraType.CreditCamera);
+    public void ActivateWorkCamera() => ActivateCamera(CameraType.WorkCamera);
 
     public void ActivateCamera(CameraType cameraType)
     {
@@ -69,6 +72,10 @@ public class CameraSwitcher : MonoBehaviour
                 creditCamera.Priority = 10;
                 StartCoroutine(ActivateGameobjectAfterDelay(UIController.Instance.creditsContents.gameObject, 0.5f));
                 break;
+            case CameraType.WorkCamera:
+                workCamera.Priority = 10;
+                StartCoroutine(ActivateGameobjectAfterDelay(UIController.Instance.workExperienceContents.gameObject, 0.5f));
+                break;
         }
 
         // Update active camera type for debugging
@@ -82,6 +89,7 @@ public class CameraSwitcher : MonoBehaviour
         projectCamera.Priority = priority;
         aboutCamera.Priority = priority;
         creditCamera.Priority = priority;
+        workCamera.Priority = priority;
     }
 
     private void DisableCurrentContents()
@@ -89,6 +97,7 @@ public class CameraSwitcher : MonoBehaviour
         UIController.Instance.projectScreenContents?.gameObject.SetActive(false);
         UIController.Instance.aboutMeContents?.gameObject.SetActive(false);
         UIController.Instance.creditsContents?.gameObject.SetActive(false); 
+        UIController.Instance.workExperienceContents?.gameObject.SetActive(false);
     }
 
     IEnumerator ActivateGameobjectAfterDelay(GameObject content, float delay)
