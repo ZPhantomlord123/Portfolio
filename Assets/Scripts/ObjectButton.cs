@@ -21,6 +21,7 @@ public class ObjectButton : MonoBehaviour
         // Apply the clickColor only if it is provided, otherwise, keep the original color.
         if (clickColor != null)
         {
+            AudioManager.instance.PlaySoundEffect(SoundEffect.UIClick);
             textRenderer.material = clickColor; // Change the material to clickColor when the mouse button is pressed down.
         }
     }

@@ -18,6 +18,7 @@ public class ProjectScreenController : MonoBehaviour
     {
         if (isButtonCooldown) return; // Exit the function if button is on cooldown
 
+        AudioManager.instance.PlaySoundEffect(SoundEffect.UIClick);
         currentIndex--;
         if (currentIndex < 0)
         {
@@ -32,6 +33,7 @@ public class ProjectScreenController : MonoBehaviour
     {
         if (isButtonCooldown) return; // Exit the function if button is on cooldown
 
+        AudioManager.instance.PlaySoundEffect(SoundEffect.UIClick);
         currentIndex++;
         if (currentIndex >= projectScreens.Count)
         {

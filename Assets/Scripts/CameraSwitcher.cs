@@ -23,6 +23,8 @@ public class CameraSwitcher : MonoBehaviour
     public CinemachineVirtualCamera creditCamera;
     public CinemachineVirtualCamera workCamera;
 
+    private bool init = false;
+
     private void OnValidate()
     {
         ActivateCamera(activeCameraType);
@@ -38,10 +40,17 @@ public class CameraSwitcher : MonoBehaviour
         ActivateCamera(CameraType.AwakeCamera);
         yield return new WaitForSeconds(1f);
         ActivateCamera(CameraType.DefaultCamera);
+        AudioManager.instance.PlaySoundEffect(SoundEffect.StartRing);
+        AudioManager.instance.PlayBackgroundMusic();
+        init = true;
     }
 
     public void ActivateAwakeCamera() => ActivateCamera(CameraType.AwakeCamera);
-    public void ActivateDefaultCamera() => ActivateCamera(CameraType.DefaultCamera);
+    public void ActivateDefaultCamera()
+    {
+        if (init) { AudioManager.instance.PlaySoundEffect(SoundEffect.UIClick); }
+        ActivateCamera(CameraType.DefaultCamera);
+    } 
     public void ActivateProjectCamera() => ActivateCamera(CameraType.ProjectCamera);
     public void ActivateAboutCamera() => ActivateCamera(CameraType.AboutCamera);
     public void ActivateCreditCamera() => ActivateCamera(CameraType.CreditCamera);

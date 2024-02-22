@@ -33,7 +33,6 @@ public class HyperlinkButton : MonoBehaviour
     public void OnMouseUp()
     {
         // Open the URL in the default web browser
-        Debug.Log("YOOOOOOO");
         Application.OpenURL(URL);
     }
 }
