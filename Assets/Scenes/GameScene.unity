@@ -18702,8 +18702,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1173294, y: 1.06, z: 0.00000007724133}
-  m_Center: {x: 0.0265181, y: -0.76, z: 0.0000037760767}
+  m_Size: {x: 5.000552, y: 1.06, z: 0.00000007821054}
+  m_Center: {x: 0.22089528, y: -0.76000273, z: 0.14769737}
 --- !u!114 &1218448464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18787,7 +18787,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0.34157956}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

@@ -7,21 +7,20 @@ public class AboutMeController : MonoBehaviour
     [SerializeField] private GameObject infoTab;
     [SerializeField] private GameObject skillsTab;
     [SerializeField] private GameObject miscTab;
-    private bool init = false;
 
     private void OnEnable()
     {
-        ShowInfoTab();
-        
+        infoTab.SetActive(true);
+        skillsTab.SetActive(false);
+        miscTab.SetActive(false); 
     }
 
     public void ShowInfoTab()
     {
-        if(init)AudioManager.instance.PlaySoundEffect(SoundEffect.UIClick);
+        AudioManager.instance.PlaySoundEffect(SoundEffect.UIClick);
         infoTab.SetActive(true);
         skillsTab.SetActive(false);
         miscTab.SetActive(false);
-        init = true;
     }
 
     public void ShowSkillsTab()
