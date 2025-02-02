@@ -23,6 +23,7 @@ public class UIController : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject); // Optional: Keep the instance alive across scene loads
         }
+        Application.targetFrameRate = 60;
     }
 
     // Add your UI management methods here
